@@ -100,4 +100,95 @@ public class Main {
     }
 }
 
+---------------------------------------------------------------------------------------
+EJERCICIO CON CONSTRUCTOR 
+
+
+public class Main {
+    public static void main(String[] args) {
+        Coche coche1 = new Coche(5, 4,  150);  //instanciar
+        System.out.println(coche1.numeroDeLLantas);
+        System.out.println(coche1.numeroDePuertas);
+        System.out.println(coche1.velocidadMax);
+        System.out.println((coche1.velocidadActual));
+
+        //Coche coche2 = new Coche();
+        //System.out.println(coche2.velocidadActual);
+        //Coche coche3 = new  Coche();  //No tiene nada que ver con las demas instancias -  comparten propiedades pero no son los mismos.
+
+    }
+}
+class Coche{
+    int numeroDeLLantas;
+    int numeroDePuertas;
+    int velocidadMax;
+    float velocidadActual; // por los decimales se escoje float, o tambien podria ser double.
+
+    public Coche(){
+        numeroDeLLantas = 5;
+        numeroDePuertas = 4;
+        velocidadMax = 120;
+        System.out.println("Estoy en el constructor sin parametros");
+    }
+
+
+    public Coche( int llantas, int puertas, int velocidad){
+    numeroDeLLantas = llantas;
+    numeroDePuertas = puertas;
+    velocidadMax = velocidad;
+    System.out.println("Estoy en el constructor con parametros");
+    }
+}
+
+------------------------------------------------------------------------------------------------------------
+
+
+public class Main {
+    public static void main(String[] args) {
+        Coche coche1 = new Coche(5, 4,  150);  //instanciar
+        System.out.println(coche1.numeroDeLLantas);
+        System.out.println(coche1.numeroDePuertas);
+        System.out.println(coche1.velocidadMax);
+        System.out.println((coche1.velocidadActual));
+
+        Coche coche2 = new Coche();    //SOBRECARGA DEL CONSTRUCTOR
+        System.out.println(coche2.numeroDeLLantas);
+        System.out.println(coche2.numeroDePuertas);
+        System.out.println(coche2.velocidadMax);
+        System.out.println((coche2.velocidadActual));
+
+        //Coche coche3 = new  Coche();  //No tiene nada que ver con las demas instancias -  comparten propiedades pero no son los mismos.
+
+    }
+}
+class Coche{
+    int numeroDeLLantas;
+    int numeroDePuertas;
+    int velocidadMax;
+    float velocidadActual; // por los decimales se escoje float, o tambien podria ser double.
+
+    public Coche(){
+        numeroDeLLantas = 5;
+        numeroDePuertas = 4;
+        velocidadMax = 120;
+        System.out.println("Estoy en el constructor sin parametros");
+    }
+
+
+    public Coche( int llantas, int puertas, int velocidad){
+    numeroDeLLantas = llantas;
+    numeroDePuertas = puertas;
+    velocidadMax = velocidad;
+    System.out.println("Estoy en el constructor con parametros");
+    }
+}
+
+//Para buenas practicas se debe llamar los int igual ejemplo: se le agg this.
+    // public Coche( int numeroDeLLantas , int numeroDePuertas, int velocidadMax){
+    // this.numeroDeLLantas = numeroDeLLantas;
+    // this.numeroDePuertas = numeroDePuertas;
+    // this.velocidadMax = velocidadMax;
+    // System.out.println("Estoy en el constructor con parametros");
+}
+
 
