@@ -194,7 +194,7 @@ class Coche{
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 
-IMPRIMIR EN PANTALLA PORPIEDAD PUBLICA
+IMPRIMIR EN PANTALLA VARIABLE PUBLICA
 
 public class Main {
     public static void main(String[] args) {
@@ -211,7 +211,7 @@ class Vehiculo{
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-IMPRIMIR PROPIEDADES PRIVADAS CON set y get //get: optener un valor // set: cambiar un valor
+IMPRIMIR VARIABLE PRIVADAS CON set y get //get: optener un valor // set: cambiar un valor
 
 
 public class Main {
