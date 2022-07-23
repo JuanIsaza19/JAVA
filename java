@@ -191,4 +191,100 @@ class Coche{
     // System.out.println("Estoy en el constructor con parametros");
 }
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+IMPRIMIR EN PANTALLA PORPIEDAD PUBLICA
+
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo vehiculo = new Vehiculo ();
+        vehiculo.tipo = "cilca";
+        System.out.println(vehiculo.tipo);
+
+    }
+}
+class Vehiculo{
+    String tipo;
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+IMPRIMIR PROPIEDADES PRIVADAS CON set y get //get: optener un valor // set: cambiar un valor
+
+
+public class Main {
+    public static void main(String[] args) {
+        Vehiculo coche = new Vehiculo ();
+        coche.setTipo("DMAX");
+
+        Vehiculo moto = new Vehiculo();
+        moto.setTipo("RX 115");
+
+    System.out.println(coche.getTipo());
+    System.out.println(moto.getTipo());
+
+    }
+}
+class Vehiculo {
+    private String tipo;
+
+    public void setTipo (String tipo) {
+        this.tipo = tipo;
+    }
+        public String getTipo (){
+        return this.tipo;
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehiculo coche = new Vehiculo ();
+        coche.setTipo("DMAX");
+        coche.setVelocidadMax(120);
+
+        Vehiculo moto = new Vehiculo();
+        moto.setTipo("RX 115");
+        moto.setVelocidadMax(80);
+
+    System.out.println(coche.getTipo());
+    System.out.println(coche.getVelocidadMax());
+
+    System.out.println(moto.getTipo());
+    System.out.println(moto.getVelocidadMax());
+
+    //System.out.println(coche.getTipo() + " " + coche.getVelocidadMax());  OTRA OPCION DE IMPRIMIR. PARA QUE QUEDE ASI: DMAX 120
+    //System.out.println(moto.getTipo() + " " + moto.getVelocidadMax());
+    
+}
+class Vehiculo {
+    private String tipo;
+    private int velocidadMax;
+    
+    public void setVelocidadMax (int velocidadMax) {
+        this.velocidadMax = velocidadMax;
+    }
+    public  int getVelocidadMax (){
+        return  this.velocidadMax;
+    }
+    public void setTipo (String tipo) {
+        this.tipo = tipo;
+    }
+    public String getTipo (){
+        return this.tipo;
+    }
+}
+
+
+
+
+
+
+
+
+
 
