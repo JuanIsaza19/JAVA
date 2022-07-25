@@ -304,7 +304,7 @@ public class Main {
 
     System.out.println(coche.getTipo() + " " + coche.getVelocidadMax());
     System.out.println(moto.getTipo() + " " + moto.getVelocidadMax());
-    System.out.println(coche.isRapido());
+    System.out.println(coche.isRapido());      // DEPENDE SI SELECCIONO COCHE O  MOTO EL VERDADERO Y FALSO //
 
     }
 }
