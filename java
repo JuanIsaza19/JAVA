@@ -279,6 +279,59 @@ class Vehiculo {
     }
 }
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehiculo coche = new Vehiculo ();
+        coche.setTipo("DMAX");
+        coche.setVelocidadMax(220);
+        coche.setRapido(true);
+
+        Vehiculo moto = new Vehiculo();
+        moto.setTipo("RX 115");
+        moto.setVelocidadMax(150);
+        moto.setRapido(false);
+
+
+    //System.out.println(coche.getTipo());
+    //System.out.println(coche.getVelocidadMax());
+
+    //System.out.println(moto.getTipo());
+    //System.out.println(moto.getVelocidadMax());
+
+    System.out.println(coche.getTipo() + " " + coche.getVelocidadMax());
+    System.out.println(moto.getTipo() + " " + moto.getVelocidadMax());
+    System.out.println(coche.isRapido());
+
+    }
+}
+class Vehiculo {
+    private String tipo;
+    private int velocidadMax;
+    private boolean rapido;  //los boolean son falso o verdadero//
+
+    public void setRapido (boolean rapido){
+        this.rapido = rapido;
+    }
+    public boolean isRapido(){  //cuando es boolean el get se llama is.//
+        return this.rapido;
+    }
+    public void setVelocidadMax (int velocidadMax) {
+        this.velocidadMax = velocidadMax;
+    }
+    public  int getVelocidadMax (){
+        return  this.velocidadMax;
+    }
+    public void setTipo (String tipo) {
+        this.tipo = tipo;
+    }
+    public String getTipo (){
+        return this.tipo;
+    }
+}
 
 
 
