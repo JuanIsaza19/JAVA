@@ -398,7 +398,7 @@ public class Main {
     public static void main(String[] args) {
         Moto moto = new Moto();
         moto.velocidadMax = 12;   // herencia, por que la clase Moto no tiene la propiedad velocidadMax, pero la puedo utilizar //
-        moto.matricula = "";
+        moto.matricula = "ABC 1236 CO";
 
     System.out.println(moto.compruebaMatricula("ABC 1236 CO"));   // El numero a imprimir debe coincidir con el if de la funcion publica //
     }
@@ -428,7 +428,9 @@ class Moto extends Coche {    //IMPORTANTE EL extends PARA HACER HERENCIA//
                                                                        // EN ESTA HERENCIA, CONSISTE EN UTILIZAR LAS VARIABLES (int velocidadMax y String matricula) 
                                                                        QUE PERTENECEN A LA CLASE VEHICULO, EN LAS OTRAS CLASES HIJAS (extends) - LUEGO CREAR UN OBJETO 
                                                                        (moto) Y DARLE VALORES A LAS VARIABLES. ESTE EJEMPLO ES CON UNA FUNCION PUBLICA BOOLEAN (compuebaMatricula) 
-                                                                       QUE IGUALMENTE HEREDA LA VARIABLE moto.
+                                                                       QUE IGUALMENTE HEREDA LA VARIABLE (moto), SE LE DAN VALORES, LUEGO SE IMPRIME Y LA COMPARACACION
+                                                                       (true o flase) SALE DEL VALOR QUE SE LE DIO EN EL if Y EL VALOR DE PARENCIS DE LA IMPRESION//
+                                                              
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
