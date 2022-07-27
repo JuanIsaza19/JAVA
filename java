@@ -341,3 +341,91 @@ class Vehiculo {
 
 
 
+public class Main {
+    public static void main(String[] args) {
+        Moto moto = new Moto();
+        moto.velocidadMax = 12;   // herencia, por que la clase Moto no tiene la propiedad velocidadMax, pero la puedo utilizar //
+        moto.matricula = "";
+
+    System.out.println(moto.compruebaMatricula("ABC 1236 CO"));   // El numero a imprimir debe coincidir con el if de la funcion publica //
+    }
+}
+class Vehiculo {
+    int velocidadMax;
+    String matricula;
+
+    public boolean compruebaMatricula (String matricula){     //crear funcion dentro de {} //
+        if (matricula == "ABC 1236 CO"){      //debe coincidir con la linea de imprimir //
+            return true;
+        }
+        return false;
+    }
+}
+
+class Coche extends Vehiculo {       //nunca olvida que class es con c minuscula//
+
+    }
+
+class Moto extends Coche {    //IMPORTANTE EL extends PARA HACER HERENCIA//
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
