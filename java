@@ -340,142 +340,57 @@ EJERCICIO MODULO 8
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+public class Main {
+    public static void main(String[] args) {
+
+        Persona persona = new Persona();
+        persona.setNombre("Juan Pablo");
+        System.out.println("Soy " + persona.getNombre());   // Así imprimi propiedad por propiedad -  Pendiente del parentecis dentro de getTipo -  String lleva (" ")//
+
+        persona.setEdad(25);     //dar valores a las propiedades   - importante a los int no colocar ""//
+        System.out.println("Tengo " + persona.getEdad());    //imporrtante dejar un espacio en la ultima comilla " )
+
+        persona.setTelefono(315521456);
+        System.out.println("Mi telefono es " + persona.getTelefono());
+
+    }
+}
+
+class Persona {
+    private String nombre;
+    private int edad;
+    private int telefono;
+
+    public void setNombre (String nombre) {
+        this.nombre = nombre;
+        }
+    public String getNombre() {   //PENDIENTE DE NO PONER ; //
+        return this.nombre;
+        }
+
+    public void setEdad(int edad) {   //Es void, no int no devuelve nada. Pero si acepta datos int;
+        this.edad = edad;
+        }
+    public int getEdad () {
+        return this.edad;
+        }
+
+    public  void setTelefono (int telefono) {    //por que es void y no int?? //
+        this.telefono = telefono;
+        }
+    public int getTelefono () {
+        return this.telefono;
+        }
+}
+
+                                                                                //EJERCICIO MODULO 8 (CREAR CLASE PERSONA - CREAR VARIABLES PRIVADAS NOMBRE, EDAD, TELEFONO
+                                                                                CREAR get Y set PARA CADA PROPIEDAD - CREAR OBJETO PERSONA - UTILIZAR get Y set PARA
+                                                                                DARLE VALORES A LAS PROPIEDADES Y LUEGO MOSTRAR EN PANTALLA //
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+HERENCIA
 
 
 
@@ -507,6 +422,14 @@ class Coche extends Vehiculo {       //nunca olvida que class es con c minuscula
 class Moto extends Coche {    //IMPORTANTE EL extends PARA HACER HERENCIA//
 
 }
+
+                                                                        
+                                                                        
+                                                                       // EN ESTA HERENCIA, CONSISTE EN UTILIZAR LAS VARIABLES (int velocidadMax y String matricula) 
+                                                                       QUE PERTENECEN A LA CLASE VEHICULO, EN LAS OTRAS CLASES HIJAS (extends) - LUEGO CREAR UN OBJETO 
+                                                                       (moto) Y DARLE VALORES A LAS VARIABLES. ESTE EJEMPLO ES CON UNA FUNCION PUBLICA BOOLEAN (compuebaMatricula) 
+                                                                       QUE IGUALMENTE HEREDA LA VARIABLE moto.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
