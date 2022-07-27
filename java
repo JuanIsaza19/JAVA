@@ -408,7 +408,7 @@ class Vehiculo {
     String matricula;
 
     public boolean compruebaMatricula (String matricula){     //crear funcion dentro de {} //
-        if (matricula == "ABC 1236 CO"){      //debe coincidir con la linea de imprimir //
+        if (matricula == "ABC 1236 CO"){      //debe coincidir con la linea de imprimir //     //PARA PROGRAMAR QUE ES IGUAL (==)//
             return true;
         }
         return false;
