@@ -425,21 +425,51 @@ class Moto extends Coche {    //IMPORTANTE EL extends PARA HACER HERENCIA//
 
                                                                         
                                                                         
-                                                                       // EN ESTA HERENCIA, CONSISTE EN UTILIZAR LAS VARIABLES (int velocidadMax y String matricula) 
+                                                                       //ESTA HERENCIA, CONSISTE EN UTILIZAR LAS VARIABLES (int velocidadMax y String matricula) 
                                                                        QUE PERTENECEN A LA CLASE VEHICULO, EN LAS OTRAS CLASES HIJAS (extends) - LUEGO CREAR UN OBJETO 
                                                                        (moto) Y DARLE VALORES A LAS VARIABLES. ESTE EJEMPLO ES CON UNA FUNCION PUBLICA BOOLEAN (compuebaMatricula) 
                                                                        QUE IGUALMENTE HEREDA LA VARIABLE (moto), SE LE DAN VALORES, LUEGO SE IMPRIME Y LA COMPARACACION
-                                                                       (true o flase) SALE DEL VALOR QUE SE LE DIO EN EL if Y EL VALOR DE PARENCIS DE LA IMPRESION//
+                                                                       (true o flase) SALE DEL VALOR QUE SE LE DIO EN EL if Y EL VALOR DE PARENTECIS DE LA IMPRESION//
                                                               
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
+public class Main {
+    public static void main(String[] args) {
+        Moto moto = new Moto();
+        moto.setSonido("BRRRRRRR");
+        System.out.println(moto.getSonido());   //get PARA IMPRIMIR y set para el nombre//
 
+    }
+}                                               //  IMPORTANTE SIEMPRE CERRAR } LA CLASS MAIN//
+ class Moto {                        //CLASE PADRE//
+        int velocidadMaxima;
+        String matricula;
+        String sonido;
 
+        public Moto() {                           //CONSTRUCTOR - SE DEBE LLAMAR IGUAL QUE LA CLASS//
+            System.out.println("estoy en el construcor de Moto");
+        }
 
+        public String getSonido() {
+            return this.sonido;                //AL PARECER NO IMPORTA SI VA PRIMERO EL get O EL set//
+        }
 
+        public void setSonido(String sonido) {
+            this.sonido = sonido;
+        }
+    }
 
+class Carro extends Moto{
+
+}
+                                                                    EJERCICIO PARA IMPRIMIR LA VARIABLE (String sonido), SE CREA UNA CLASS (Moto) CON VARIABLES (VelocidadMaxima;
+                                                                    matricula y sonido) SE COLOCA UNA FUNCION PUBLICA (CONSTRUCTOR) PARA QUE IMPRIMA EL TEXTO (estoy en el
+                                                                    constructor ....) EL ORDEN DEL get Y set NO IMPORTA, SE HACE UNA INSTANCIA EN EL Main PARA DARLE VALORES
+                                                                    A LAS VARIABLES. SE PUEDE CREAR OTRA CLASE HIJA Y HACER HERENCIA. 
+                          
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
