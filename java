@@ -474,18 +474,86 @@ class Carro extends Moto{
 
 
 
+public class Main {
+    public static void main(String[] args) {
+        Carro carro  = new Carro();           //DISPARA CONSTRUCTOR//
+        carro.setSonido("BRRRRRRR");
+        System.out.println(carro.getSonido());   //get PARA IMPRIMIR y set para el nombre//
+
+    }
+}                                               //  IMPORTANTE SIEMPRE CERRAR } LA CLASS MAIN//
+ abstract class Moto {                        //CLASE PADRE//
+        int velocidadMaxima;
+        String matricula;
+        String sonido;
+        
+        public Moto() {                           //CONSTRUCTOR - SE DEBE LLAMAR IGUAL QUE LA CLASS//
+            System.out.println("estoy en el constructor de Moto");
+        }
+
+        abstract public String getSonido();
+        abstract public void setSonido(String sonido);
+    }
+class Carro extends Moto{
+
+    public String getSonido() {
+        return "Soy un super sonido: " + this.sonido;  //sirve para imprimir//
+    }                                                   
+                                            // EJEMPLO DE CLASE HIJA UTILIZANDO ABSTRACCION (abstrac) IGUAL SE PUEDE TRABAJAR POR QUE A LA HIJA SE LE DIERON PUBLICAS //
+
+    public void setSonido(String sonido){
+        this.sonido = sonido;
+    }
+}
+
+class Patineta extends Carro{
+
+    public String getSonido() {
+        return "Soy un sonidillo: " + this.sonido;  //sirve para imprimir//
+    }
+    public void setSonido(String sonido){
+        this.sonido = sonido;
+    }                                                                                 
+}
+
+                                                                                          //SE AGREGO CLASES ABSTRACTAS (CLASES QUE SE DEJAN RESEÑADAS PARA PODER SER UTILIZADAS
+                                                                                         EN OTRAS CLASES HIJAS, ESTO IMPRIME (Soy un super sonido) POR QUE EN EL MAIN SE LE INDICHO
+                                                                                         IMPRIMIR carro. !!!DERIVAR CLASE!!!  //
+                                                                                         
+                                                                                    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
+public class Main {
+    public static void main(String[] args) {
+
+        Moto moto = new Moto();                        // EL ORDEN DE ESTO ALTERA EL RESULTADO//
+        moto.diHola();
+
+        Coche coche = new Coche();
+        coche.diHola();
+        
+    }
+}
+class Moto {
+    int velocidadMax;                                    //PROPIEDAD, AVECES NO ES NECESARIO PONERLA//
+    public void diHola(){                                //NOMBRE DE LA FUNCION PUBLICA//
+       System.out.println("HOLAAAAAAA");                 //IMPRIMIR//
+    }
+}
+
+class Coche extends Moto {
+    public void diHola(){
+        System.out.println("SOY UN COCHEEEE");
+    }
+
+}
+                                                                POLIMORFISMO - SI VEMOS LA FUNCION (diHola) PERTENECE A LA CLASE MOTO, DONDE SE LE DA UN VALOR DE (HOLAAAA
+                                                                PERO EN LA CLASE HIJA (Coche) DA COMO RESULTADO (SOY UN COCHEEE).
 
 
-
-
-
-
-
-
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
