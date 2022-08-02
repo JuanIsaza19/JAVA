@@ -557,6 +557,82 @@ class Coche extends Moto {
 
 
 
+public class Main {
+    public static void main(String[] args) {
+
+        Coche coche = new Coche();
+        coche.diHola();   //NO SE LE PUEDE PASAR A PRINTLN, POR QUE ES UNA FUNCION QUE NO DEVUELVE NADA (void)//
+
+
+
+    }
+}
+class Moto {
+    int velocidadMax;       //PROPIEDAD, AVECES NO ES NECESARIO PONERLA//
+
+    public void diHola() {       //NOMBRE DE LA FUNCION PUBLICA//
+        System.out.println("HOLAAAAAAA");    //IMPRIMIR//
+    }
+}
+
+class Coche extends Moto {
+    public void diHola() {
+        System.out.println("SOY UN COCHEEEEEE");
+    }                            // SI LA FUNCION diHola EN MI CLASE Coche NO EXISTE, EJECUTARA LA FUNCION DE MI CLASE PADRE Moto//
+}
+
+
+
+                                                                            // EJEMPLO DE POLIMORFISMO //
+                                                                            
+---------------------------------------------------------------------------------------------------------------------------------------------------------                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   public int sumaNumeros(int a, int b) {      //IMPORTANTE PONER (int a, int b) //
+        System.out.println("Soy el suma numeros de int");
+        return a + b;
+    }
+
+    public float sumaNumeros(float a, float b) {     //FLOTANTES//
+        System.out.println("Soy el suma numeros de float");
+        return a + b * (float) 9.0;                 //IMPORTANTE PONER EL (float) //
+    }
+
+    double sumaNumeros(double a, double b) {
+        //System.out.println("EL RESULTADO ES: " + (a + b));    //IMPRIMIR//
+    }
 
 
 
