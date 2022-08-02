@@ -589,6 +589,51 @@ class Coche extends Moto {
 
 
 
+public class Main {
+    public static void main(String[] args) {
+
+        Coche coche = new Coche();
+        coche.diHola();   //NO SE LE PUEDE PASAR A PRINTLN, POR QUE ES UNA FUNCION QUE NO DEVUELVE NADA (void)//
+
+
+
+    }
+}
+class Moto {
+    int velocidadMax;       //PROPIEDAD, AVECES NO ES NECESARIO PONERLA//
+
+    public void diHola() {       //NOMBRE DE LA FUNCION PUBLICA//
+        System.out.println("HOLAAAAAAA");    //IMPRIMIR//
+    }
+}
+
+class Coche extends Moto {
+
+}                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
