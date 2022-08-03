@@ -397,10 +397,10 @@ HERENCIA
 public class Main {
     public static void main(String[] args) {
         Moto moto = new Moto();
-        moto.velocidadMax = 12;   // herencia, por que la clase Moto no tiene la propiedad velocidadMax, pero la puedo utilizar //
-        moto.matricula = "ABC 1236 CO";
+        moto.velocidadMax = 12;                             // herencia, por que la clase Moto no tiene la propiedad velocidadMax, pero la puedo utilizar //
+        moto.matricula = "";
 
-    System.out.println(moto.compruebaMatricula("ABC 1236 CO"));   // El numero a imprimir debe coincidir con el if de la funcion publica //
+    System.out.println(moto.compruebaMatricula("ABC 1236 CO"));                     // El numero a imprimir debe coincidir con el if de la funcion publica PARA QUE SEA TRUE //
     }
 }
 class Vehiculo {
@@ -408,7 +408,7 @@ class Vehiculo {
     String matricula;
 
     public boolean compruebaMatricula (String matricula){     //crear funcion dentro de {} //
-        if (matricula == "ABC 1236 CO"){      //debe coincidir con la linea de imprimir //     //PARA PROGRAMAR QUE ES IGUAL (==)//
+        if (matricula == "ABC 1236 CO"){                                        //debe coincidir con la linea de imprimir //     //PARA PROGRAMAR QUE ES IGUAL (==)//
             return true;
         }
         return false;
@@ -578,7 +578,7 @@ class Moto {
 class Coche extends Moto {
     public void diHola() {
         System.out.println("SOY UN COCHEEEEEE");
-    }                            // SI LA FUNCION diHola EN MI CLASE Coche NO EXISTE, EJECUTARA LA FUNCION DE MI CLASE PADRE Moto//
+    }                                                           // SI LA FUNCION diHola EN MI CLASE Coche NO EXISTE, EJECUTARA LA FUNCION DE MI CLASE PADRE Moto//
 }
 
 
@@ -588,13 +588,12 @@ class Coche extends Moto {
 ---------------------------------------------------------------------------------------------------------------------------------------------------------                                                                            
 
 
-
 public class Main {
     public static void main(String[] args) {
 
         Coche coche = new Coche();
-        coche.diHola();   //NO SE LE PUEDE PASAR A PRINTLN, POR QUE ES UNA FUNCION QUE NO DEVUELVE NADA (void)//
-
+        coche.sumaNumeros(3.5, 16.5 );                          // SEGUN EL VALOR QUE SE LE COLOQUE EL DETECTA A CUAL sumaNumeros IR//
+                                                                 // TAMBIEN PUEDE IR ejem. a: 3.5, (int)16 ); Y LO VA A ACEPTAR //
 
 
     }
@@ -603,81 +602,239 @@ class Moto {
     int velocidadMax;       //PROPIEDAD, AVECES NO ES NECESARIO PONERLA//
 
     public void diHola() {       //NOMBRE DE LA FUNCION PUBLICA//
-        System.out.println("HOLAAAAAAA");    //IMPRIMIR//
+    System.out.println("HOLAAAAAAA");    //IMPRIMIR//
     }
 }
 
 class Coche extends Moto {
 
-}                        
+    public void diHola() {       //NOMBRE DE LA FUNCION PUBLICA//
+        System.out.println("soy un cocheee");    //IMPRIMIR//
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   public int sumaNumeros(int a, int b) {      //IMPORTANTE PONER (int a, int b) //
-        System.out.println("Soy el suma numeros de int");
+    public int sumaNumeros(int a, int b) {
+        System.out.println("Soy el sumaNumeros de INT");
         return a + b;
     }
 
-    public float sumaNumeros(float a, float b) {     //FLOTANTES//
-        System.out.println("Soy el suma numeros de float");
-        return a + b * (float) 9.0;                 //IMPORTANTE PONER EL (float) //
+    public float sumaNumeros(float a, float b){
+        System.out.println("Soy el sumaNumeros de FLOAT");
+        return a + b * (float) 9.0;                         //FLOAT - NUMEROS DECIMALES - RETORNA SUMA Y MULTIPLICA POR 9 //
     }
 
-    double sumaNumeros(double a, double b) {
-        //System.out.println("EL RESULTADO ES: " + (a + b));    //IMPRIMIR//
+    public void sumaNumeros(double a, double b){
+        System.out.println("Soy el sumaNumeros del DOUBLE");
+        System.out.println("El resultado es: " + (a + b));
     }
+}
+                                                                                       //EN ESTE EJEMPLO LA MISMA FUNCION CAMBIA EL FUNCIONAMIENTO SEGUN LOS 
+                                                                                       PARAMETROS QUE RECIBA, (double) NUMEROS CON DECIMALES, (int) NUMEROS ENTEROS Y
+                                                                                       AVERIGUAR CUALES SON LOS FLOTANTES//
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+
+interface Moto {
+    void  Acelerar(int cuantaVelocidad);
+    void  Frenar(int cuantaVelocidad);
+}
+
+class Coche implements Moto {
+    public void Acelerar(int cuantaVelocidad){
+
+    }
+    public void Frenar(int cuantaVelocidad){
+
+    }
+}
+                                                                    // PRIMER ACERCAMIENTO CON INTERFASES (interface)//
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EJERCICIO MODULO 9
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+    Cliente cliente = new Cliente();
+
+    cliente.setEdad(25);
+    System.out.println("Mi edad es: " + cliente.getEdad());
+
+    cliente.setNombre("Juan Pablo");
+    System.out.println("Mi nombre es: " + cliente.getNombre());
+
+    cliente.setTelefono(315000111);
+    System.out.println("Mi telefono es: " + cliente.getTelefono());
+
+    cliente.setCredito(1.000);
+    System.out.println("Mi credito es: " + cliente.getCredito());
+
+
+    Trabajador trabajador = new Trabajador();
+
+    trabajador.setEdad(28);
+    System.out.println("Mi edad es: " + trabajador.getEdad());
+
+    trabajador.setNombre("Leonardo");
+    System.out.println("Mi nombre es: " + trabajador.getNombre());
+
+    trabajador.setTelefono(315111111);
+    System.out.println("Mi telefono es: " + trabajador.getTelefono());
+
+    trabajador.setSalario(3.000);
+    System.out.println("Mi salario es: " + trabajador.getSalario());
+
+
+    }
+}
+
+class Persona {
+     int edad;
+    String nombre;
+    int telefono;
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    public int getEdad() {
+        return this.edad;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+    public int getTelefono() {
+        return this.telefono;
+    }
+
+}
+
+class Cliente extends Persona{
+    double credito;
+
+    public void setCredito(double credito) {
+        this.credito = credito;
+    }
+    public double getCredito() {
+        return this.credito;
+    }
+
+}
+
+class Trabajador extends Persona {
+    double salario;
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public double getSalario() {
+        return this.salario;
+    }
+
+}
+                                    // EJERCICIO DONDE SE CREA UNA CLASS Persona, CON LAS SIGUIENTES VARIABLES: edad, nombre, telefono. LUEGO SE CREA UNA CLASE Cliente
+                                    QUE HEREDA DE CLASE Persona, ESTA NUEVA CLASE TIENE UNA VARIABLE ADICIONAL credito. SE LES DA VALORES Y SE MUESTRA EN PANTALLA.
+                                    LUEGO SE CREA UNA CLASE Trabajador que HEREDA DE Persona, ESTA NUEVA CLASE TIENE  UNA NUEVA VARIABLE salario. //
+                                    
+                                    //COMO YO LO HICE//
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                                    // COMO LO HICIERON EN EL REPOSITORO SOLUCIONADO //
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cliente cliente = new Cliente();
+        Trabajador trabajador = new Trabajador();
+        cliente.nombre = "Raúl";
+        cliente.edad = 23;
+        cliente.telefono = 293214122;
+        cliente.credito = 150.55;
+        System.out.println("Soy " + cliente.nombre + ", tengo " + cliente.edad + " años y mi telefono es " + cliente.telefono
+                + " y mi credito disponible es " + cliente.credito + "€");
+
+        trabajador.nombre = "Jose";
+        trabajador.edad = 42;
+        trabajador.telefono = 582910244;
+        trabajador.salario = 2000.32;
+        System.out.println("Soy " + trabajador.nombre + ", tengo " + trabajador.edad + " años y mi telefono es " + trabajador.telefono
+                + " y mi salario es de " + trabajador.salario + "€");
+
+    }
+}
+
+class Persona{
+    int edad;
+    int telefono;
+    String nombre;
+}
+
+class Cliente extends Persona{
+    double credito;
+}
+
+class Trabajador extends Persona {
+    double salario;
+} 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
