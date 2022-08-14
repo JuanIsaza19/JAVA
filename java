@@ -648,10 +648,10 @@ interface Moto {
 }
 
 class Coche implements Moto {
-    public void Acelerar(int cuantaVelocidad){
+    public void Acelerar(int cuantaVelocidad){             //METODO O FUNCION ACELERAR, PUBLIC - SE PUEDE ACCEDER DESDE UN OBJETO//
 
     }
-    public void Frenar(int cuantaVelocidad){
+    public void Frenar(int cuantaVelocidad){               //METODO O FUNCION FRENAR//
 
     }
 }
